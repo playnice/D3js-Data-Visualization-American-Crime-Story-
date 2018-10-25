@@ -1,8 +1,6 @@
-TDS 3401 Data Visualization
+# TDS 3401 Data Visualization
 
-Project: Creating Interactive Visualizations
-
-Project Proposal
+# Project: Creating Interactive Visualizations
 
 Team Members:
 
