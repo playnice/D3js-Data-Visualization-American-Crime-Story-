@@ -1,0 +1,332 @@
+body { margin: 0; font-size: 16px; width: 1600px; margin: 0 auto; font-family: 'Roboto', sans-serif; box-shadow: 0px 0px 8px 0px #D50000; }
+
+.header {
+  background: #D50000;
+  color: #fff;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  max-width: calc(1600px - 2em);
+  width: 100%;
+  font-size: 2em;
+  box-shadow: 0px 0px 16px 0px #D50000;
+  padding: 0 1em;
+}
+
+/* choropleth */
+#choropleth path { cursor: pointer; stroke: #333; stroke-width: 0.5; fill: #fff; }
+.state { stroke: #fff; }
+#choropleth path:hover { stroke-width: 3; }
+#choropleth .background { fill: #fff; }
+
+/* treemap */
+#treemap {
+  max-width: 100%;
+  overflow:auto;
+}
+#treemap text {
+  pointer-events: none;
+}
+#treemap .grandparent text {
+  font-weight: bold;
+}
+#treemap rect {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+#treemap rect.parent,
+#treemap .grandparent rect {
+  stroke-width: 3px;
+}
+#treemap .grandparent:hover rect {
+  fill: grey;
+}
+#treemap .children rect.parent,
+#treemap .grandparent rect {
+  cursor: pointer;
+}
+#treemap .children rect.child {
+  opacity: 0;
+  stroke-width: 1px;
+}
+#treemap .children:hover rect.child {
+  opacity: 1;
+}
+#treemap .children:hover rect.parent {
+  opacity: 0;
+}
+#treemap .legend {
+  margin-bottom:8px !important;
+}
+#treemap .legend rect {
+  stroke-width: 0px;
+}
+#treemap .legend text {
+  text-anchor: middle;
+  pointer-events: auto;
+  font-size: 13px;
+  font-family: sans-serif;
+  fill: black;
+}
+#treemap .form-group {
+    text-align:left;
+}
+#treemap .textdiv {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    padding: 7px;
+    cursor: pointer;
+    overflow:none;
+}
+#treemap .textdiv .title {
+    font-size: 102%;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size:11px !important;
+}
+#treemap .textdiv p{
+    line-height: 13px;
+    margin:0 0 4px !important;
+    padding:0px;
+    font-size:10px !important;
+}
+#treemap div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 322px;
+  height: auto;
+  padding: 10px;
+  font: 12px sans-serif;
+  border: 0px;
+  border-radius: 4px;
+  pointer-events: none;
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px #673ab7;
+}
+#treemap .tooltip p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #673ab7;
+  border-bottom: 1px solid #673ab7;
+  margin-bottom: 10px;
+}
+
+
+/* line graph */
+#linegraph .axis--x path {
+  display:none;
+}
+#linegraph p {
+  margin-left: 20px;
+}
+#linegraph .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+#linegraph .Block{
+  float: left;
+  margin: 40;
+  height: 700;
+  width: 1980;
+  #border: 1px solid black;
+}
+#linegraph .legend {
+  font-size: 12px;
+  font-weight: bold;
+}
+#linegraph #slider-range{
+  margin-left: 30px;
+  width: 20%;
+}
+#groupedbar #dropdown{
+  /* float:right; */
+  margin: 10px 0px 0px 10px;
+
+}
+#groupedbar #dropdown select {
+    padding: 4px 8px;
+    border-color: #FF1744;
+    border-radius: 4px;
+}
+
+/* michael */
+#first {
+  height:840px;
+  width: 900px;
+  float:left;
+}
+ #second {
+  height:840px;
+  float:right;
+}
+div#Button {
+  width: 640px;
+  position: absolute;
+  bottom: 40px;
+  left: 480px;
+}
+#Slider{
+position: relative;
+left: 100px;
+}
+.bar {
+fill: #E91E63;
+}
+
+.bar:hover {
+fill: #880E4f;
+}
+
+.axis--x path {
+display: none;
+}
+#play_button {
+background: #B71C1C;
+padding-right: 26px;
+border-radius: 3px;
+border: none;
+color: white;
+margin: 0;
+padding: 0 12px;
+width: 60px;
+cursor: pointer;
+height: 30px;
+}
+#play_button:hover {
+background-color: #4292c6;
+}
+.toolTip {
+position: absolute;
+display: none;
+min-width: 80px;
+height: auto;
+background: none repeat scroll 0 0 #ffffff;
+border: 1px solid #000000;
+padding: 14px;
+text-align: center;
+}
+.ticks {
+  font-size: 10px;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #dcdcdc;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+/* dashboard formatting */
+#choropleth, #treemap {
+  float: left;
+}
+#choropleth, #linegraph, #normalbar {
+  margin-right: 28px;
+}
+.container {
+  padding: 36px 36px;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+#linegraph, #groupedbar {
+  float: left;
+  height: 625px;
+}
+#normalbar, #stackedbar {
+  float: left;
+  height: 728px;
+}
+.chart-header {
+  height: 40px;
+  background: #FF1744;
+  width: calc(100% - 2em);
+  line-height: 40px;
+  padding: 0 1em;
+  color: #fff;
+  font-weight: bold;
+}
+#ncann {
+  box-shadow: 0px 0px 4px 0px #ff1744;
+  overflow: auto;
+  margin-bottom: 2em;
+}
+#linegraph, #stackedbar, #groupedbar, #normalbar {
+  box-shadow: 0px 0px 4px 0px #FF1744;
+  margin-bottom: 2em;
+}
+
+label{
+  padding-left: 2em;
+  line-height: 24px;
+}
+#ncann-filter {
+  max-width: 340px;
+  box-shadow: 0px 0px 4px 0px #FF5252;
+  margin: 1em;
+}
+#filter-header {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  background: #FF5252;
+  padding: 10px 1em;
+}
+.main-cat {
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 1em;
+}
+#choropleth {
+  position: relative;
+}
+#reset {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 1em;
+  position: absolute;
+  left: 16px;
+  bottom: 30px;
+  border: none;
+  outline: none;
+  background: #D50000;
+  border-radius: 4px;
+}
+#reset:hover {
+  box-shadow: 0px 0px 4px 0px #D00000;
+  cursor: pointer;
+}
+
+#yy-leg {
+  padding: 1em;
+  box-shadow: 0px 0px 4px 0px #FF5252;
+}
+#yy-leg, #ncann-filter {
+  float: left;
+  margin: 16px;
+}

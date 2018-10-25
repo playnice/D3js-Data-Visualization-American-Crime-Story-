@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>American Crime Story</title>
+    <link type="text/css" rel="stylesheet" href="us-dashboard.css" />
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">American Crime Story</div>
+    <div class="container">
+
+      <div id="ncann">
+        <div class="chart-header">Statistics of U.S Crime in Year 2013</div>
+        <div id="ncann-filter">
+          <div id="filter-header">Type of Crimes</div>
+        </div>
+        <div id="yy-leg">
+          <p>Amount of Selected Crime for Choropleth and Treemap</p>
+          <div id="cp-legend"></div>
+        </div>
+        <div style="clear:both;"></div>
+        <div id="choropleth">
+          <div class="chart-header">Choropleth of U.S. Crimes (2013)</div>
+          <button id="reset">Reset Position</button>
+        </div>
+        <div id="treemap">
+          <div class="chart-header">Treemap of U.S. Crimes (2013)</div>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="linegraph">
+        <div class="chart-header">U.S Crime Rates over 20 Years (1994 - 2013)</div>
+        <p>
+          <label for="amount"><b>Year:</b></label>
+          <input type="text" id="amount" readonly style="border:0; color: red; font-weight:bold;">
+          <div id="slider-range"></div>
+          <svg id="multiLineChart" width="750" height="500"></svg>
+        </p>
+      </div>
+      <div id="groupedbar">
+        <div class="chart-header">Comparison of Crime Types between Two States</div>
+        <div id='dropdown'></div>
+        <svg id="groupedBar" width="750" height="500"></svg>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="normalbar">
+        <div class="chart-header">Crime Rates agains Crime Types</div>
+        <div id="BarChart"></div>
+    		<div id="Slider"><div id = "Button"></div></div>
+      </div>
+      <div id="stackedbar">
+        <div class="chart-header">Percentange Change of Crime Type in Different Timestamp</div>
+        <div id="StackedBarChart"></div>
+      </div>
+    </div>
+
+    <script src="choropleth.js"></script>
+    <script src="treemap.js"></script>
+    <script src="linegraph.js"></script>
+    <script src="groupedbar.js"></script>
+    <script src="michael.js"></script>
+  </body>
+</html>

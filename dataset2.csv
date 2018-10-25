@@ -1,0 +1,4 @@
+To_Year,From_Year,Violent_Crime,Violent_Crime_Rate,Murder_and_Nonnegligent_Manslaughter,Murder_and_Nonnegligent_Manslaughter_Rate,Rape,Rape_Rate,Robbery,Robbery_Rate,Aggravated_Assault,Aggravated_Assault_Rate,Property_Crime,Property_Crime_Rate,Burglary,Burglary_Rate,LarcenyTheft,LarcenyTheft_Rate,Motor_Vehicle_Theft,Motor_Vehicle_Theft_Rate
+2013,2012,-4.4,-5.1,-4.4,-5.1,-6.3,-7,-2.8,-3.5,-5,-5.6,-4.1,-4.8,-8.6,-9.3,-2.7,-3.4,-3.3,-4
+2013,2009,-12.3,-14.8,-7.8,-10.5,-10.6,-13.2,-15.6,-18,-10.9,-13.4,-7.5,-10.2,-12.5,-15,-5.3,-8,-12.1,-14.6
+2013,2004,-14.5,-20.6,-12.1,-18.3,-16.1,-22.1,-14.1,-20.2,-14.5,-20.6,-16.3,-22.3,-10.1,-16.5,-13.4,-19.6,-43.5,-47.5
